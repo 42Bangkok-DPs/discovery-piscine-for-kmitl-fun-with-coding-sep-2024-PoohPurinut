@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# if [ $# -eq 0 ]; then
-#     echo "No arguments supplied"
-#     exit 1
-# fi
+if [ $# -eq 0 ]; then
+    echo "No arguments supplied"
+    exit 1
+fi
 
-# for arg in "$@"; do
-#     echo "$arg"
-#     mkdir "arg"
-# done
+for arg in "$@"; do
+    echo "$arg"
+    mkdir "ex$arg"
+done
