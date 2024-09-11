@@ -1,0 +1,22 @@
+#button {
+    padding: 12px 20px;
+    font-size: larger;
+    font-weight: 300;
+  }
+  #dropdown-content {
+    display: none;
+    margin-top: 10px;
+  }
+  #button:hover {
+    background-color: darkgray;
+  }
+  #button:hover #dropdown-content {
+    display: block;
+  }
+  #dropdown-content a {
+    text-decoration: none;
+    color: white;
+  }
+  #dropdown-content a:hover {
+    color: gray;
+  }
