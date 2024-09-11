@@ -1,0 +1,38 @@
+table,
+th {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+table {
+  width: 100%;
+}
+th {
+  font-weight: 100;
+  padding: 30px;
+}
+#firstHeader {
+  background-color: rgb(118, 142, 16);
+}
+#secondHeader {
+  background-color: rgb(255, 191, 107);
+}
+@media (max-width: 1200px) {
+  th {
+    padding: 15px;
+  }
+}
+@media (max-width: 992px) {
+  th {
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  th {
+    padding: 5px;
+  }
+}
+@media (max-width: 576px) {
+  th {
+    padding: 3px;
+  }
+}
