@@ -12,9 +12,11 @@ th {
 }
 #firstHeader {
   background-color: rgb(118, 142, 16);
+  height: 100vh;
 }
 #secondHeader {
   background-color: rgb(255, 191, 107);
+  height: 100vh;
 }
 @media (max-width: 1200px) {
   th {
