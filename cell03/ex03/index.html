@@ -8,29 +8,6 @@
   <body>
     <div id="ft_list"></div>
     <button id="createButton">New</button>
-    <script>
-      const toDoList = document.getElementById("ft_list");
-      const button = document.getElementById("createButton");
-      button.addEventListener("click", () => {
-        const toDo = prompt("Fill a new TO DO:");
-        if (toDo) {
-          createTodo(toDo);
-        }
-      });
-      function createTodo(message) {
-        const newToDo = document.createElement("div");
-        newToDo.innerText = message;
-        toDoList.prepend(newToDo);
-        newToDo.addEventListener("click", () => {
-          deleteTodo(newToDo);
-        });
-      }
-      function deleteTodo(todo) {
-        let confirmDelete = confirm("Do you really want to remove this TODO?");
-        if (confirmDelete == true) {
-          todo.remove();
-        }
-      }
-    </script>
+    <script src="todo.js"></script>
   </body>
 </html>
