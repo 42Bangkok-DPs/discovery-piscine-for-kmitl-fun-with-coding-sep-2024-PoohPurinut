@@ -1,0 +1,64 @@
+.navbar-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+#hamburgerIcon {
+  display: none;
+}
+
+#quote {
+  top: 50%;
+  left: 65%;
+  font-size: 30px;
+  width: 400px;
+}
+
+.backgroundImage {
+  background-image: url(https://images.unsplash.com/photo-1528747045269-390fe33c19f2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29udGFjdHxlbnwwfHwwfHx8MA%3D%3D);
+  width: 100vw;
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.img-header {
+  width: 288px;
+  height: 200px;
+}
+
+@media (max-width: 900px) {
+  .backgroundImage {
+    height: 50vh;
+    background-size: cover;
+  }
+  #quote {
+    top: 50%;
+    left: 55%;
+    font-size: 22px;
+    width: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-list {
+    display: none;
+    flex-direction: column;
+  }
+  .backgroundImage {
+    height: 30vh;
+    background-size: cover;
+    margin-top: 80px;
+  }
+  #hamburgerIcon {
+    display: flex;
+  }
+  #quote {
+    top: 50%;
+    left: 55%;
+    font-size: 20px;
+    width: 120px;
+  }
+}

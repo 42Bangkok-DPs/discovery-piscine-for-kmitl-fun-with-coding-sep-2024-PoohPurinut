@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="about.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-black">
+    <!-- Navbar -->
+    <nav class="p-5 bg-zinc-900 text-white fixed top-0 w-full z-10">
+      <button class="text-white text-5xl" id="hamburgerIcon">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+      <div class="navbar-list text-xl" id="navbarList">
+        <a href="../mainpage.html" class="hover:text-zinc-500 navbar-menu"
+          >Main Page</a
+        >
+
+        <a href="index.html" class="hover:text-zinc-500 navbar-menu">Home</a>
+        <a href="about.html" class="hover:text-zinc-500 navbar-menu"
+          >About Me</a
+        >
+        <a href="skills.html" class="hover:text-zinc-500 navbar-menu">Skills</a>
+        <a href="contacts.html" class="hover:text-zinc-500 navbar-menu"
+          >Contacts</a
+        >
+      </div>
+    </nav>
+    <!-- Background Image -->
+    <div class="backgroundImage relative">
+      <div class="absolute text-black" id="quote">Hi, I'm Pooh.</div>
+    </div>
+    <!-- About Me -->
+    <div class="container mt-7">
+      <div class="text-2xl text-white text-center">About Me</div>
+      <img
+        src="IMG_20240913_180412.jpg"
+        alt=""
+        class="block mx-auto w-[288px] h-[288px] my-4"
+      />
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-white text-center">
+        <div class="w-3/4 mx-auto">
+          Hello, My name is Purinut, but you can call me "Pooh". I'm 21 years
+          old. I'm currently studying electrical engineering.
+        </div>
+        <div class="w-3/4 mx-auto">
+          I don't like what I'm studying at all. When I was in high school. I
+          did't know why I took this major. I can't imagine myself working in
+          this field.
+        </div>
+        <div class="w-3/4 mx-auto">
+          I started thinking about what to do with my life, so before my third
+          year at university, I discovered that I love programming. Therefore, I
+          started learning about programming and I liked it so much that I
+          hardly ever got bored of it.
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="text-center bg-zinc-900 mt-5">
+      <p class="text-white pt-5">© 2024 Pooh. All rights reserved.</p>
+      <p class="text-white">I do not own the images I use on this website.</p>
+      <p class="text-white pb-5">
+        All images are from
+        <a href="https://unsplash.com/" style="color: #e35701"
+          >https://unsplash.com/</a
+        >
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

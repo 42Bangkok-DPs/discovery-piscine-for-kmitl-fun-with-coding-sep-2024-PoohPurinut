@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-black">
+    <!-- Navbar -->
+    <nav class="p-5 bg-zinc-900 text-white fixed top-0 w-full z-10">
+      <button class="text-white text-5xl" id="hamburgerIcon">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+      <div class="navbar-list text-xl" id="navbarList">
+        <a href="../mainpage.html" class="hover:text-zinc-500 navbar-menu">Main Page</a>
+        <a href="index.html" class="hover:text-zinc-500 navbar-menu">Home</a>
+        <a href="about.html" class="hover:text-zinc-500 navbar-menu"
+          >About Me</a
+        >
+        <a href="skills.html" class="hover:text-zinc-500 navbar-menu">Skills</a>
+        <a href="contacts.html" class="hover:text-zinc-500 navbar-menu">Contacts</a>
+      </div>
+    </nav>
+    <!-- Background Image -->
+    <div class="backgroundImage relative">
+      <div class="absolute text-white" id="quote">
+        It is never too late to be what you might have been.
+      </div>
+    </div>
+    <!-- Featured -->
+    <div class="container mt-7">
+      <div class="text-white text-center mb-7 text-2xl">Featured</div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-white text-center">
+        <div>
+          <img
+            src="https://images.unsplash.com/photo-1516571934337-d366d0c75b89?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            class="block mx-auto w-[288px] h-[200px]"
+          />
+          <h1 class="text-xl m-3">About Me</h1>
+          <p class="w-3/4 mx-auto">
+            Hi, I'm Purinut but you can call me "POOH". I'm currently studying
+            electrical ...
+          </p>
+          <a href="about.html">
+            <button
+              class="rounded-full px-3 py-2 my-2"
+              style="background-color: #e35701"
+            >
+              Learn more
+            </button>
+          </a>
+        </div>
+        <div>
+          <img
+            src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            class="block mx-auto w-[288px] h-[200px]"
+          />
+          <h1 class="text-xl m-3">Skills</h1>
+          <p class="w-3/4 mx-auto">
+            I study electrical engineering, but during my internship, I worked
+            on web development a bit...
+          </p>
+          <a href="skills.html">
+            <button
+              class="rounded-full px-3 py-2 my-2"
+              style="background-color: #e35701"
+            >
+              Learn more
+            </button></a
+          >
+        </div>
+        <div>
+          <img
+            src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=1774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            class="block mx-auto w-[288px] h-[200px]"
+          />
+          <h1 class="text-xl m-3">Contacts</h1>
+          <p class="w-3/4 mx-auto">My social media..</p>
+          <a href="contacts.html">
+            <button
+              class="rounded-full px-3 py-2 my-2"
+              style="background-color: #e35701"
+            >
+              Contact me
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="text-center bg-zinc-900 mt-5">
+      <p class="text-white pt-3">© 2024 Pooh. All rights reserved.</p>
+      <p class="text-white">I do not own the images I use on this website.</p>
+      <p class="text-white pb-5">
+        All images are from
+        <a href="https://unsplash.com/" style="color: #e35701"
+          >https://unsplash.com/</a
+        >
+      </p>
+    </footer>
+    <script src="script.js"></script>
+
+  </body>
+</html>

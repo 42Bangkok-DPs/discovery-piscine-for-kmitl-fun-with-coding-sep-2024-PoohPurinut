@@ -1,0 +1,51 @@
+.navbar-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+#hamburgerIcon {
+  display: none;
+}
+
+.backgroundImage {
+  background-image: url(https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  width: 100vw;
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.img-header {
+  width: 288px;
+  height: 200px;
+}
+
+@media (max-width: 900px) {
+  .backgroundImage {
+    height: 50vh;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-list {
+    display: none;
+    flex-direction: column;
+  }
+  .backgroundImage {
+    height: 30vh;
+    background-size: cover;
+    margin-top: 80px;
+  }
+  #hamburgerIcon {
+    display: flex;
+  }
+  #quote {
+    top: 50%;
+    left: 55%;
+    font-size: 20px;
+    width: 120px;
+  }
+}
