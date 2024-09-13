@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="firstInput" />
+    <select name="operator" id="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+    <input type="text" id="secondInput" />
+    <input type="submit" value="Try me!" id="submitButton" />
+    <script>
+      const submitButton = document.getElementById("submitButton");
+      submitButton.addEventListener("click", () => {
+        const firstInput = document.getElementById("firstInput").value;
+        const secondInput = document.getElementById("secondInput").value;
+        const operator = document.getElementById("operator").value;
+        firstInt = Number(firstInput);
+        secondInt = Number(secondInput);
+        if (firstInt % 1 != 0 || secondInt % 1 != 0) {
+          alert("Error :(");
+        } else if (secondInt == 0) {
+          alert("It’s over 9000!");
+          console.log("It’s over 9000!");
+        } else {
+          let result;
+          switch (operator) {
+            case "+":
+              result = firstInt + secondInt;
+              break;
+            case "-":
+              result = firstInt - secondInt;
+              break;
+            case "*":
+              result = firstInt * secondInt;
+              break;
+            case "/":
+              result = firstInt / secondInt;
+              break;
+            case "%":
+              result = firstInt % secondInt;
+              break;
+            default:
+              result = "Invalid operator";
+          }
+          console.log("Result:", result);
+          alert("Result: " + result);
+        }
+      });
+    </script>
+  </body>
+</html>
