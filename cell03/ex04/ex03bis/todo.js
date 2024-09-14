@@ -1,9 +1,9 @@
-const toDoList = $("#ft_list");
-const button = $("#createButton");
+const $toDoList = $("#ft_list");
+const $button = $("#createButton");
 
 loadTodos();
 
-button.click(() => {
+$button.click(() => {
   const toDo = prompt("Fill a new TO DO:");
   if (toDo) {
     createTodo(toDo);
@@ -13,7 +13,7 @@ button.click(() => {
 
 function createTodo(message) {
   const newToDo = $("<div></div>").text(message);
-  toDoList.prepend(newToDo);
+  $toDoList.prepend(newToDo);
   newToDo.click(() => {
     deleteTodo(newToDo);
   });
@@ -29,7 +29,7 @@ function deleteTodo(todo) {
 
 function saveTodos() {
   const todos = [];
-  toDoList.children().each((index, element) => {
+  $toDoList.children().each((index, element) => {
     todos.push($(element).text());
   });
   document.cookie =
