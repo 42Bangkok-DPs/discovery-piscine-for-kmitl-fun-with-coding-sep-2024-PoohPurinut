@@ -33,7 +33,12 @@
           const firstInt = Number(firstInput);
           const secondInt = Number(secondInput);
 
-          if (firstInt % 1 !== 0 || secondInt % 1 !== 0) {
+          if (
+            firstInt % 1 !== 0 ||
+            secondInt % 1 !== 0 ||
+            firstInt < 0 ||
+            secondInt < 0
+          ) {
             alert("Error :(");
           } else if (secondInt == 0) {
             alert("It’s over 9000!");
