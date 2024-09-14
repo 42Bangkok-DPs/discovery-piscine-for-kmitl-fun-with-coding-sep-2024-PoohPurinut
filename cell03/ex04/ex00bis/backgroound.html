@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <link rel="stylesheet" href="backgroound.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+
+  <body>
+    <button id="colorButton">Change Background Color</button>
+    <script>
+      $(document).ready(() => {
+        $("#colorButton").click(() => {
+          const hexCharacters = [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+          ];
+          let hexColorRep = "#";
+          for (let i = 0; i < 6; i++) {
+            const randomPosition = Math.floor(
+              Math.random() * hexCharacters.length
+            );
+            hexColorRep += hexCharacters[randomPosition];
+          }
+          $("body").css("background-color", hexColorRep);
+        });
+      });
+    </script>
+  </body>
+</html>

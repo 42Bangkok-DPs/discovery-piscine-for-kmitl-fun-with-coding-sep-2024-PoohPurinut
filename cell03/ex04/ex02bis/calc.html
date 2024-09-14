@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <input type="text" id="firstInput" />
+    <select name="operator" id="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+    <input type="text" id="secondInput" />
+    <input type="submit" value="Try me!" id="submitButton" />
+    <script>
+      $(document).ready(() => {
+        const $submitButton = $("#submitButton");
+        $submitButton.click(() => {
+          const firstInput = $("#firstInput").val();
+          const secondInput = $("#secondInput").val();
+          const operator = $("#operator").val();
+
+          const firstInt = Number(firstInput);
+          const secondInt = Number(secondInput);
+
+          if (firstInt % 1 !== 0 || secondInt % 1 !== 0) {
+            alert("Error :(");
+          } else if (secondInt == 0) {
+            alert("It’s over 9000!");
+            console.log("It’s over 9000!");
+          } else {
+            let result;
+            switch (operator) {
+              case "+":
+                result = firstInt + secondInt;
+                break;
+              case "-":
+                result = firstInt - secondInt;
+                break;
+              case "*":
+                result = firstInt * secondInt;
+                break;
+              case "/":
+                result = firstInt / secondInt;
+                break;
+              case "%":
+                result = firstInt % secondInt;
+                break;
+              default:
+                result = "Invalid operator";
+            }
+            console.log("Result:", result);
+            alert("Result: " + result);
+          }
+        });
+        setInterval(() => {
+          alert("Please, use me...");
+        }, 30000);
+      });
+    </script>
+    <!-- <script>
+      const submitButton = document.getElementById("submitButton");
+      submitButton.addEventListener("click", () => {
+        const firstInput = document.getElementById("firstInput").value;
+        const secondInput = document.getElementById("secondInput").value;
+        const operator = document.getElementById("operator").value;
+        firstInt = Number(firstInput);
+        secondInt = Number(secondInput);
+        if (firstInt % 1 != 0 || secondInt % 1 != 0) {
+          alert("Error :(");
+        } else if (secondInt == 0) {
+          alert("It’s over 9000!");
+          console.log("It’s over 9000!");
+        } else {
+          let result;
+          switch (operator) {
+            case "+":
+              result = firstInt + secondInt;
+              break;
+            case "-":
+              result = firstInt - secondInt;
+              break;
+            case "*":
+              result = firstInt * secondInt;
+              break;
+            case "/":
+              result = firstInt / secondInt;
+              break;
+            case "%":
+              result = firstInt % secondInt;
+              break;
+            default:
+              result = "Invalid operator";
+          }
+          console.log("Result:", result);
+          alert("Result: " + result);
+        }
+      });
+      setInterval(() => {
+        alert("Please, use me...");
+      }, 30000);
+    </script> -->
+  </body>
+</html>

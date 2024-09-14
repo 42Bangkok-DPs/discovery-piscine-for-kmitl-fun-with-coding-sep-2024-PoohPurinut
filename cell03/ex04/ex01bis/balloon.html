@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div
+      id="balloon"
+      style="
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: red;
+      "
+    ></div>
+    <script>
+      $(document).ready(() => {
+        const $balloon = $("#balloon");
+
+        $balloon.click(() => {
+          let width = parseInt($balloon.css("width"));
+          let height = parseInt($balloon.css("height"));
+          width += 10;
+          height += 10;
+          $balloon.css({ width: width + "px", height: height + "px" });
+
+          if ($balloon.css("background-color") === "rgb(255, 0, 0)") {
+            $balloon.css("background-color", "green");
+          } else if ($balloon.css("background-color") === "rgb(0, 128, 0)") {
+            $balloon.css("background-color", "blue");
+          } else if ($balloon.css("background-color") === "rgb(0, 0, 255)") {
+            $balloon.css("background-color", "red");
+          }
+
+          if (width > 420 && height > 420) {
+            $balloon.css({ width: "200px", height: "200px" });
+          }
+        });
+
+        $balloon.mouseleave(() => {
+          let width = parseInt($balloon.css("width"));
+          let height = parseInt($balloon.css("height"));
+          width -= 5;
+          height -= 5;
+          $balloon.css({ width: width + "px", height: height + "px" });
+
+          if ($balloon.css("background-color") === "rgb(255, 0, 0)") {
+            $balloon.css("background-color", "blue");
+          } else if ($balloon.css("background-color") === "rgb(0, 128, 0)") {
+            $balloon.css("background-color", "red");
+          } else if ($balloon.css("background-color") === "rgb(0, 0, 255)") {
+            $balloon.css("background-color", "green");
+          }
+        });
+      });
+    </script>
+    <!-- <script>
+      const balloon = document.getElementById("balloon");
+      balloon.addEventListener("click", () => {
+        let width = parseInt(balloon.style.width);
+        let height = parseInt(balloon.style.height);
+        width += 10;
+        height += 10;
+        balloon.style.width = width.toString() + "px";
+        balloon.style.height = height.toString() + "px";
+        if (balloon.style.backgroundColor == "red") {
+          balloon.style.backgroundColor = "green";
+        } else if (balloon.style.backgroundColor == "green") {
+          balloon.style.backgroundColor = "blue";
+        } else if (balloon.style.backgroundColor == "blue") {
+          balloon.style.backgroundColor = "red";
+        }
+        if (width > 420 && height > 420) {
+          balloon.style.width = "200px";
+          balloon.style.height = "200px";
+        }
+      });
+      balloon.addEventListener("mouseleave", () => {
+        let width = parseInt(balloon.style.width);
+        let height = parseInt(balloon.style.height);
+        if (width > 200 && height > 200) {
+          width -= 5;
+          height -= 5;
+          balloon.style.width = width.toString() + "px";
+          balloon.style.height = height.toString() + "px";
+          if (balloon.style.backgroundColor == "red") {
+            balloon.style.backgroundColor = "blue";
+          } else if (balloon.style.backgroundColor == "blue") {
+            balloon.style.backgroundColor = "green";
+          } else if (balloon.style.backgroundColor == "green") {
+            balloon.style.backgroundColor = "red";
+          }
+        }
+      });
+    </script> -->
+  </body>
+</html>
