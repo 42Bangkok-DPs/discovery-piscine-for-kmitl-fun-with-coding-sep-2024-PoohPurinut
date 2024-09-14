@@ -1,30 +1,13 @@
 const toDoList = $("#ft_list");
 const button = $("#createButton");
 
-function getCookies(name) {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
-  if (parts.length === 2) return parts.pop().split(";").shift();
-  return null;
-}
-
-function setCookie(name, value, days) {
-  const date = new Date();
-  date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-  const expires = `expires=${date.toUTCString()}`;
-  document.cookie = `${name}=${value};${expires};path=/`;
-}
-
-$(document).ready(() => {
-  const savedToDos = JSON.parse(getCookies("todos")) || [];
-  savedToDos.forEach((todo) => createTodo(todo));
-});
+loadTodos();
 
 button.click(() => {
   const toDo = prompt("Fill a new TO DO:");
   if (toDo) {
     createTodo(toDo);
-    saveToCookies(toDo);
+    saveTodos();
   }
 });
 
@@ -40,18 +23,24 @@ function deleteTodo(todo) {
   const confirmDelete = confirm("Do you really want to remove this TODO?");
   if (confirmDelete) {
     todo.remove();
-    removeFromCookies(todo.text());
+    saveTodos();
   }
 }
 
-function saveToCookies(toDo) {
-  const savedToDos = JSON.parse(getCookies("todos")) || [];
-  savedToDos.push(toDo);
-  setCookie("todos", JSON.stringify(savedToDos), 7);
+function saveTodos() {
+  const todos = [];
+  toDoList.children().each((index, element) => {
+    todos.push($(element).text());
+  });
+  document.cookie =
+    "todos=" + encodeURIComponent(JSON.stringify(todos)) + "; path=/";
 }
 
-function removeFromCookies(toDo) {
-  let savedToDos = JSON.parse(getCookies("todos")) || [];
-  savedToDos = savedToDos.filter((item) => item !== toDo);
-  setCookie("todos", JSON.stringify(savedToDos), 7);
+function loadTodos() {
+  const cookies = document.cookie.split("; ");
+  const todosCookie = cookies.find((row) => row.startsWith("todos="));
+  if (todosCookie) {
+    const todos = JSON.parse(decodeURIComponent(todosCookie.split("=")[1]));
+    todos.reverse().forEach((todo) => createTodo(todo));
+  }
 }
